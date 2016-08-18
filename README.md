@@ -1,2 +1,2 @@
 # bc-9-oop
-OOP stuff for boot camp.
+This is my OOP stuff for the boot camp.
