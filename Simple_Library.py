@@ -15,7 +15,7 @@ class NotesApplication(object):
 		the NOTE_CONTENT represent the note content and the author represents the note author.
 		'''
 		for item in self.notes:
-			print "Note Id: " + str(self.notes.index(item)) + ": " + item +  " By "  + self.author
+			return ("Note Id " + str(self.notes.index(item)) + ": " + item +  " By "  + self.author)
 
 	def get(self, note_id):
 		'''
@@ -30,9 +30,9 @@ class NotesApplication(object):
 		returns all the notes with that text within it in the following format.
 
 		'''
-		while notes:
-			if search_text in self.notes:
-				return "Showing results for search" + search_text + notes.index(search_text) + "by" + search_text.author
+	
+		if search_text in self.notes:
+			return "Showing results for search " + search_text + " ID " + str(self.notes.index(search_text)) + " by " + self.author
 	def delete(self, note_id):
 		'''
 		This function deletes the note at the index note_id of the notes list.
@@ -43,9 +43,9 @@ class NotesApplication(object):
 		self.notes[note_id] = new_content
 
 juma = NotesApplication("Dr Juma")
-print juma.create("Kifo Kisimani")
+juma.create("Kifo Kisimani")
 juma.list()
-juma.replace(0,"Mtu wa Watu")
+juma.search("Kifo Kisimani")
 juma.list()
 
 
